@@ -1,6 +1,8 @@
 import {React, useState} from "react";
 import { useTranslation } from 'react-i18next';
 
+import { Tree } from "./Tree";
+
 function Nav({ t, changeLanguage }) {
     const [state, setState] = useState(" " + t("chooseLang"));
 
@@ -41,6 +43,8 @@ function Nav({ t, changeLanguage }) {
     );
 }
 
+
+
 function Footer({ t }) {
     return (
         <footer className="d-flex flex-wrap justify-content-between align-items-cdnter py-3 border-top fixed-bottom bg-body-tertiary">
@@ -66,6 +70,7 @@ export default function App() {
     return (
         <>
             <Nav t={t} changeLanguage={changeLanguage} />
+            <Tree />
             <Footer t={t} />
         </>
     );
